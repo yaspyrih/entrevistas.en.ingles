@@ -6,70 +6,102 @@
     <title>Práctica de entrevista laboral en inglés</title>
     <style>
       :root {
-        color-scheme: light;
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
       }
 
       body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(135deg, #f4f8ff 0%, #eef4ff 100%);
-        color: #1f2937;
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        background: radial-gradient(circle at top left, #15304d 0%, #07111f 55%, #030711 100%);
+        color: #f8fafc;
         min-height: 100vh;
         display: grid;
         place-items: center;
         padding: 24px;
-        box-sizing: border-box;
       }
 
       .card {
-        max-width: 680px;
+        max-width: 760px;
         width: 100%;
-        background: #ffffff;
-        border-radius: 20px;
-        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
-        padding: 48px 36px;
+        background: rgba(10, 18, 32, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(2, 8, 23, 0.45);
+        padding: 40px 32px;
         text-align: center;
+        backdrop-filter: blur(14px);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.14);
+        color: #7dd3fc;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
       }
 
       h1 {
-        font-size: clamp(1.7rem, 3vw, 2.4rem);
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
         margin: 0 0 16px;
-        color: #0f172a;
-        line-height: 1.3;
+        color: #f8fafc;
+        line-height: 1.25;
       }
 
       p {
-        font-size: 1.05rem;
+        font-size: 1rem;
         line-height: 1.8;
         margin: 0 0 24px;
-        color: #475569;
+        color: #cbd5e1;
       }
 
       .btn {
         display: inline-block;
         text-decoration: none;
-        background: #2563eb;
+        background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
         color: #ffffff;
         padding: 14px 24px;
         border-radius: 999px;
         font-weight: 700;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        box-shadow: 0 12px 24px rgba(37, 99, 235, 0.26);
       }
 
       .btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 14px 24px rgba(37, 99, 235, 0.25);
+        box-shadow: 0 16px 28px rgba(37, 99, 235, 0.35);
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+
+      iframe {
+        border: 0;
+        border-radius: 18px;
+        overflow: hidden;
       }
     </style>
   </head>
   <body>
     <main class="card">
-      <h1>Agendá una práctica de entrevista laboral en inglés.</h1>
-      <p>Mercadopago y calendario:</p>
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a class="btn" href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <div class="actions" style="margin-bottom: 10px; justify-content: flex-end;">
+        <a class="eyebrow" href="preguntas-frecuentes.html" style="margin: 0; text-decoration: none;">Preguntas frecuentes</a>
       </div>
+      <h1>Agendá una práctica de entrevista laboral en inglés.</h1>
+      <p>Mejorá tu comunicación para entrevistas profesionales con una guía personalizada, práctica real y feedback claro.</p>
       <iframe data-tally-src="https://tally.so/embed/ZjKZoV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1046" frameborder="0" marginheight="0" marginwidth="0" title="Entrevistas.en.inglés"></iframe>
       <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     </main>
