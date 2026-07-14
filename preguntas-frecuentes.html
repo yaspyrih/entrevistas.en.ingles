@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preguntas frecuentes</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #f4f8ff 0%, #eef4ff 100%);
+        color: #1f2937;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+
+      .card {
+        max-width: 760px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        padding: 48px 36px;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        margin: 0 0 24px;
+        color: #0f172a;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        margin: 32px 0 12px;
+        color: #1e3a8a;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin: 0 0 18px;
+        color: #475569;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #2563eb;
+        color: #ffffff;
+        padding: 14px 24px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 24px rgba(37, 99, 235, 0.25);
+      }
+
+      .faq-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .faq-item {
+        margin-bottom: 24px;
+      }
+.faq-item {
+        margin-bottom: 24px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 14px 18px;
+        margin-bottom: 24px;
+        border: 1px solid #cbd5e1;
+        border-radius: 14px;
+        font-size: 1rem;
+        color: #0f172a;
+        box-sizing: border-box;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Preguntas frecuentes</h1>
+      <input class="search-input" id="faqSearch" type="search" placeholder="Buscar pregunta o respuesta..." aria-label="Buscar FAQ" />
+      <ol class="faq-list" id="faqList">
+        <li class="faq-item">
+          <h2>¿Qué incluye la práctica de entrevista?</h2>
+          <p>Incluye una entrevista simulada en inglés, retroalimentación sobre tu desempeño y sugerencias para mejorar tus respuestas y pronunciación.</p>
+        </li>
+        <li class="faq-item">
+          <h2>¿La práctica es en vivo?</h2>
+          <p>Sí, la práctica se realiza en vivo con un entrevistador que te guía durante todo el proceso.</p>
+        </li>
+        <li class="faq-item">
+          <h2>¿Puedo elegir el tipo de trabajo o rubro?</h2>
+          <p>Podemos adaptar la práctica a diferentes roles y sectores según tus necesidades y experiencia.</p>
+        </li>
+        <li class="faq-item">
+          <h2>¿Cómo reservo la sesión?</h2>
+          <p>Haz clic en el botón de regreso para volver al inicio y reservar a través del enlace de MercadoPago y calendario.</p>
+        </li>
+        <li class="faq-item">
+          <h2>¿Necesito prepararme antes?</h2>
+          <p>Te recomendamos repasar tu CV, tus logros y algunas respuestas comunes a preguntas de entrevistas para aprovechar mejor la sesión.</p>
+        </li>
+      </ol>
+      <a class="btn" href="index.html">Volver al inicio</a>
+    </main>
+    <script>
+      const searchInput = document.getElementById('faqSearch');
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      searchInput.addEventListener('input', () => {
+        const filter = searchInput.value.trim().toLowerCase();
+
+        faqItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(filter) ? '' : 'none';
+        });
+      });
+    </script>
+  </body>
+</html>
