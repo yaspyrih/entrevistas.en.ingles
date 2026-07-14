@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #0d0e11;       /* Deep obsidian background */
+    --text-main: #9ca3af;      /* Muted gray for readable body text */
+    --text-heading: #f3f4f6;   /* Crisp off-white for titles */
+    --accent-color: #ffffff;   /* Pure white accents */
+    --border-color: #212529;   /* Low-contrast dark borders */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 1rem;
+}
+
+nav {
+    max-width: 650px; /* Aligns cleanly with standard form widths */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.15s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--text-heading);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem;
+}
+
+.hero {
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    color: var(--text-heading);
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.025em;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.form-container {
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+iframe {
+    border: none;
+    background: transparent;
+}
+
+/* FAQ (Notion Dark Toggle Style) */
+details {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 0;
+}
+
+details:last-of-type {
+    border-bottom: none;
+}
+
+summary {
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--text-heading);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '▶';
+    font-size: 0.65rem;
+    color: var(--text-main);
+    margin-right: 12px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+
+details p {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    margin-left: 1.45rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+    border-top: 1px solid var(--border-color);
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+}
